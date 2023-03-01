@@ -1,0 +1,190 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	background-color: lightgray;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.General{
+	display: flex;
+	width: 800px;
+	margin: 50px auto;
+	background: white;
+	padding: 10px;
+}
+
+.General .Izquierda{
+	width: 35%;
+	background-color: lightseagreen;
+}
+
+.General .Izquierda .Imagen{
+	width: 100%;
+}
+
+.General .Izquierda .Imagen img{
+	width: 100%;
+	display: block;
+}
+
+.General .Titulo{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 10px;
+	letter-spacing: 4px;
+}
+
+.General .Izquierda .Info{
+	color: black;
+}
+
+.General .Izquierda .Abajo{
+	padding: 20px 30px;
+}
+
+.General .Articulo{
+	padding: 20px 0;
+	border-bottom: 1px solid lightseagreen;
+}
+
+.General  .Articulo:last-child{
+	border-bottom: 0;
+}
+
+.General .Izquierda .Nombre1{
+	display: none;
+}
+
+.General .Nombre1 .Subnombre{
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 5px;
+	letter-spacing: 4px;
+}
+
+.General .Izquierda .Nombre1 .role{
+	color: black;
+}
+
+.General .Izquierda .Contacto .Info:last-child{
+	 margin-top: 10px;
+}
+
+.General .Izquierda .Contacto .Subtitulo{
+	color: white;
+	margin-bottom: 2px;
+}
+
+.General .Derecha{
+	width: 65%;
+	padding: 20px 40px;
+	color: black;
+}
+
+.General .Derecha .Nombre1 .Subnombre{
+	color: black;
+	font-size: 32px;
+}
+
+.General .Derecha .Nombre1 .role{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.General .Derecha .Articulo .Titulo{
+	color: black;
+}
+
+.General .Derecha .Data{
+	display: flex;
+}
+
+.General .Derecha .Data .Año{
+	padding-right: 35px;
+	width: 115px;
+	position: relative;
+}
+
+.General .Derecha .Data .Contenido{
+	padding-left: 35px;
+	margin-bottom: 20px;
+	width: calc(100% - 115px);
+}
+
+.General .Derecha .Data .Año:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.General .Derecha .Data .Año:after{
+	content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: lightseagreen;
+}
+
+.General .Derecha .Data:last-child .Año:after{
+	display: none;
+}
+
+@media screen and (max-width: 800px){
+	.General .Derecha .Nombre1{
+		display: none;
+	}
+	.General .Izquierda .Nombre1{
+		display: block;
+	}
+	.General{
+		width: 95%;
+		margin: 10px auto;
+		flex-direction: column;
+	}
+	.General .Izquierda,
+	.General .Derecha{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 424px){
+	.General .Derecha{
+		padding: 20px 30px;
+	}
+	.General .Derecha .Data{
+		flex-direction: column;
+	}
+	.General .Derecha .Data .Año{
+		padding: 0;
+		margin-bottom: 5px;
+		width: 100%;
+		color: lightseagreen;
+	}
+	.General .Derecha .Data .Año:before,
+	.General .Derecha .Data .Año:after{
+		display: none;
+	}
+	.General .Derecha .Data .content{
+		width: 100%;
+		padding: 0;
+	}
+}
